@@ -290,22 +290,16 @@ if __name__ == '__main__':
         tokensFile.write(f"{token[0]}{strFromList(token[1])}\n")
 
     
-    i = 0
-    n = 1
-    dupNum = 0
+    i = 1
     strList = []
     seen = []
-    for elem in allTokens:
+    for token in allTokens:
+        if(token not in seen):
+            seen.append(token)
+        if(i % 10 == 0):
+            strList.append(f"{i} {len(seen)}")
         i += 1
-        if(i % 10 == 0 and i!= 0):
-            strList.append(f"{n*i} {(n*i)-dupNum}")
-            i = 0
-            n += 1
-        if(elem in seen):
-            dupNum += 1
-        seen.append(elem)
-    if(i != 0):
-        strList.append(f"{(10*n)+i} {((10*n)+i)-dupNum}")
+
     for elem in strList:
         heapsFile.write(f"{elem}\n")
 
