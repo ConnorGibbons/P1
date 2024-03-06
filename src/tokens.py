@@ -364,5 +364,19 @@ if __name__ == '__main__':
         for str in strList:
             heapsFile.write(f"{str}\n")
 
+        tokenDict = {}
+        for token in tokenizedFile:
+            if token[1] in tokenDict:
+                tokenDict[token[1]] += 1
+            else:
+                tokenDict[token[1]] = 1
+        tokenDict = sorted(tokenDict.items(), key=lambda x: x[1], reverse=True)
+        i2 = 0
+        for token in tokenDict:
+            if(i2 == 100):
+                break
+            statsFile.write(f"{token[0]} {token[1]}\n")
+            i2 += 1
+
     inputFile.close()
     
