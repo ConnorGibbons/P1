@@ -277,16 +277,16 @@ if __name__ == '__main__':
 
     # tokenizedFile = stripNewlines(tokenizedFile)
 
+    if(stopList):
+        tokenizedFile = stop(tokenizedFile)
+    if(stemming):
+        tokenizedFile = applyPorterStem(tokenizedFile)
+
     for token in tokenizedFile: 
         if(isinstance(token[1], list)):
             allTokens.extend(token[1])
         else:
             allTokens.append(token[1])
-
-    if(stopList):
-        tokenizedFile = stop(tokenizedFile)
-    if(stemming):
-        tokenizedFile = applyPorterStem(tokenizedFile)
 
     for token in tokenizedFile:
         #print(token)
