@@ -73,7 +73,11 @@ def applyRules(token):
         return retList
     token = applyApostropheRule(token)
     if(not tokenShouldBeSplit(token)[0]): #Base case 3
-        return ''.join(filter(lambda char: char.isalnum(),token.lower()))
+        token = ''.join(filter(lambda char: char.isalnum() or char == ".",token.lower()))
+        if(isNumber(token)):
+            return token
+        else:
+            return token.replace(".","")
     else: # more recursion :(
         retList = []
         for tok in tokenShouldBeSplit(token)[1]:
