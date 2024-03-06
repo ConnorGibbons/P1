@@ -130,10 +130,14 @@ def stop(tokenizedFile):
             for elem in token[1]:
                 if(elem not in stopword_lst):
                     retList.append(elem)
+                else:
+                    retList.append("")
             retTokens.append((token[0],retList))
         else:
             if(token[1] not in stopword_lst):
                 retTokens.append((token[0],token[1]))
+            else:
+                retTokens.append((token[0],""))
     finalSum = numToks(retTokens)
     print(f"Orig: {origSum}, Final: {finalSum} --> trimmed {origSum - finalSum} tokens")
     return retTokens
@@ -238,7 +242,7 @@ def countPred(word, pred):
 
 def strFromList(ls):
     if(isinstance(ls, str)):
-        return " " + ls
+        return " " + ls if ls != "" else ""
     retStr = ""
     for elem in ls:
         retStr += " " + elem
@@ -336,6 +340,7 @@ if __name__ == '__main__':
                 tokenDict[token] = 1
         tokenDict = sorted(tokenDict.items(), key=lambda x: x[1], reverse=True)
         i2 = 0 
+        statsFile.write(f"{i} \n{len(seen)}\n")
         for token in tokenDict:
             if(i2 == 100):
                 break
