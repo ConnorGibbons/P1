@@ -155,7 +155,7 @@ def porter1a(word):
     elif(word.endswith("s")):
         trimmedWord = word[:-2]
         if((len(trimmedWord) >= 1) and ("a" in trimmedWord or "e" in trimmedWord or "i" in trimmedWord or "o" in trimmedWord or "u" in trimmedWord or "y" in trimmedWord)):
-            return trimmedWord
+            return word[:-1]
         else:
             return word
     else: 
@@ -299,7 +299,7 @@ if __name__ == '__main__':
     heapsFile = open(outputPrefix + "-heaps.txt", "w+")
     statsFile = open(outputPrefix + "-stats.txt", "w+")
     allTokens = []
-
+    print(f"!!!! {porterStem('words')}")
     # tokenizedFile = stripNewlines(tokenizedFile)
     if(tokenizeType == "fancy"):
         if(stopList):
