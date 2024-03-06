@@ -146,9 +146,9 @@ def porter1a(word):
     print(f"1a Word: {word}")
     if(word.endswith("sses")):
         return word[:-2]
-    elif((word.endswith("ies")) or word.endswith("ied") and len(word) > 4):
+    elif(((word.endswith("ies")) or word.endswith("ied")) and len(word) > 4):
         return word[:-2]
-    elif((word.endswith("ies")) or word.endswith("ied") and len(word) <= 4):
+    elif(((word.endswith("ies")) or word.endswith("ied")) and len(word) <= 4):
         return word[:-1]
     elif(word.endswith("ss") or word.endswith("us")):
         return word
@@ -189,7 +189,7 @@ def porter1b(word):
 def porter1c(word):
     print(f"1c Word: {word}")
     if(word.endswith("y")):
-        if(isVowel(word[-2]) and len(word) > 2):
+        if((not isVowel(word[-2])) and len(word) > 2):
             return word[:-1] + "i"
         return word
     else:
@@ -300,7 +300,7 @@ if __name__ == '__main__':
     heapsFile = open(outputPrefix + "-heaps.txt", "w+")
     statsFile = open(outputPrefix + "-stats.txt", "w+")
     allTokens = []
-    print(f"!!!! {porterStem('selected')}")
+    print(f"!!!! {porterStem('cry')}")
     # tokenizedFile = stripNewlines(tokenizedFile)
     if(tokenizeType == "fancy"):
         if(stopList):
