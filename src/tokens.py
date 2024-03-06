@@ -174,6 +174,7 @@ def porter1b(word):
         return word
     elif(word.endswith("ed") or word.endswith("edly") or word.endswith("ing") or word.endswith("ingly")):
         trimmedWord = word[:-2] if word.endswith("ed") else (word[:-4] if word.endswith("edly") else (word[:-3] if word.endswith("ing") else word[:-5]))
+        print(f"Trimmed word: {trimmedWord}")
         firstVowelIndex = firstIndex(trimmedWord, isVowel)
         if(firstVowelIndex == -1):
             return word
@@ -181,7 +182,7 @@ def porter1b(word):
             return trimmedWord + "e"
         if(trimmedWord[-1] == trimmedWord[-2] and ((trimmedWord[-1] in ["b","d","f","g","m","n","p","r"]))):
             return trimmedWord[:-1]
-        return word
+        return trimmedWord
     else:
         return word
     
@@ -299,7 +300,7 @@ if __name__ == '__main__':
     heapsFile = open(outputPrefix + "-heaps.txt", "w+")
     statsFile = open(outputPrefix + "-stats.txt", "w+")
     allTokens = []
-    print(f"!!!! {porterStem('words')}")
+    print(f"!!!! {porterStem('selected')}")
     # tokenizedFile = stripNewlines(tokenizedFile)
     if(tokenizeType == "fancy"):
         if(stopList):
