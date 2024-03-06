@@ -352,7 +352,7 @@ if __name__ == '__main__':
         i = 1
         seen = []
         strList = []
-        for token in tokenizedFile:
+        for token in list(filter(lambda x: x[1]!= "",tokenizedFile)):
             if(token[1] not in seen):
                 seen.append(token[1])
             if(i % 10 == 0):
@@ -365,13 +365,14 @@ if __name__ == '__main__':
             heapsFile.write(f"{str}\n")
 
         tokenDict = {}
-        for token in tokenizedFile:
+        for token in list(filter(lambda x: x[1]!= "",tokenizedFile)):
             if token[1] in tokenDict:
                 tokenDict[token[1]] += 1
             else:
                 tokenDict[token[1]] = 1
         tokenDict = sorted(tokenDict.items(), key=lambda x: x[1], reverse=True)
         i2 = 0
+        statsFile.write(f"{i} \n{len(seen)}\n")
         for token in tokenDict:
             if(i2 == 100):
                 break
