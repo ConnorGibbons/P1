@@ -299,7 +299,8 @@ if __name__ == '__main__':
         if(i % 10 == 0):
             strList.append(f"{i} {len(seen)}")
         i += 1
-
+    if(i % 10 != 0):
+        strList.append(f"{i} {len(seen)}")
     for elem in strList:
         heapsFile.write(f"{elem}\n")
 
