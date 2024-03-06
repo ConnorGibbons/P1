@@ -62,7 +62,7 @@ def tokenShouldBeSplit(token):
 def applyRules(token):
     #print(f"Applying rules to {token}")
     if(isURL(token)): #Base case 1
-        return token
+        return token.replace(")","").replace("(","")
     elif(isNumber(token)): #Base case 2
         return token
     elif("-" in token):
