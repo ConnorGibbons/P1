@@ -213,9 +213,15 @@ def applyPorterStem(tokenizedFile):
         
 def isShort(string):
     if(isVowel(string[0]) and isConsonant(string[1]) and len(string) == 2):
+        print("Short, case 1")
         return True
-    elif(firstIndex(string, isVowel) != -1 and firstIndex(string, isConsonant) == 0 and countPred(string[firstIndex(string, isVowel):], isConsonantModded) == 1):
-        return True
+    elif(firstIndex(string, isVowel) != -1 and firstIndex(string, isVowel) != 0):
+        string = string[firstIndex(string, isVowel)+1:]
+        if(firstIndex(string, isVowel) == -1):
+            if(countPred(string, isConsonantModded) == 1):
+                print("Short, case 2")
+                return True
+        return False
     else:
         return False
 
@@ -300,7 +306,7 @@ if __name__ == '__main__':
     heapsFile = open(outputPrefix + "-heaps.txt", "w+")
     statsFile = open(outputPrefix + "-stats.txt", "w+")
     allTokens = []
-    print(f"!!!! {porterStem('cry')}")
+    print(f"!!!! {porterStem('pirating')}")
     # tokenizedFile = stripNewlines(tokenizedFile)
     if(tokenizeType == "fancy"):
         if(stopList):
