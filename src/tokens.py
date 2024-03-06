@@ -180,7 +180,7 @@ def porter1b(word):
             return word
         if(trimmedWord.endswith("at") or trimmedWord.endswith("bl") or trimmedWord.endswith("iz") or isShort(trimmedWord)):
             return trimmedWord + "e"
-        if(trimmedWord[-1] == trimmedWord[-2] and ((trimmedWord[-1] in ["b","d","f","g","m","n","p","r"]))):
+        if(trimmedWord[-1] == trimmedWord[-2] and ((trimmedWord[-1] in ["b","d","f","g","m","n","p","r","t"]))):
             return trimmedWord[:-1]
         return trimmedWord
     else:
@@ -306,7 +306,7 @@ if __name__ == '__main__':
     heapsFile = open(outputPrefix + "-heaps.txt", "w+")
     statsFile = open(outputPrefix + "-stats.txt", "w+")
     allTokens = []
-    print(f"!!!! {porterStem('pirating')}")
+    print(f"!!!! {porterStem('played')}")
     # tokenizedFile = stripNewlines(tokenizedFile)
     if(tokenizeType == "fancy"):
         if(stopList):
