@@ -370,7 +370,7 @@ if __name__ == '__main__':
                 tokenDict[token[1]] += 1
             else:
                 tokenDict[token[1]] = 1
-        tokenDict = sorted(tokenDict.items(), key=lambda x: x[1], reverse=True)
+        tokenDict = sorted(tokenDict.items(), key=lambda x: (-x[1],x[0]))
         i2 = 0
         statsFile.write(f"{i} \n{len(seen)}\n")
         for token in tokenDict:
