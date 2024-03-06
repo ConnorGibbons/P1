@@ -187,6 +187,7 @@ def porter1c(word):
     if(word.endswith("y")):
         if(isVowel(word[-2]) and len(word) > 2):
             return word[:-1] + "i"
+        return word
     else:
         return word
     
@@ -202,6 +203,7 @@ def applyPorterStem(tokenizedFile):
                 retList.append(porterStem(elem))
             retTokens.append((token[0],retList))
         else:
+            print(f"Stemming {token[1]} result: {porterStem(token[1])}")
             retTokens.append((token[0],porterStem(token[1])))
     return retTokens
         
@@ -287,6 +289,7 @@ if __name__ == '__main__':
         tokenizedFile = applyPorterStem(tokenizedFile)
 
     for token in tokenizedFile:
+        #print(token)
         tokensFile.write(f"{token[0]}{strFromList(token[1])}\n")
 
     

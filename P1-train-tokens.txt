@@ -4,7 +4,7 @@ are are
 all all
 of of
 the the
-stopwords, stopwords
+stopwords, stopwor
 none none
 of of
 which which
@@ -31,7 +31,7 @@ he he
 in in
 is is
 it it
-its its
+its i
 of of
 on on
 that that
@@ -44,20 +44,20 @@ Next next
 here here
 are are
 some some
-words words
+words wor
 that that
 are are
 described described
 in in
 the the
-stemming stemming
-rules rules
+stemming stem
+rules rul
 as as
-having having
+having have
 particular particular
-values values
+values valu
 after after
-stemming. stemming
+stemming. stem
 If if
 you you
 use use
@@ -74,51 +74,51 @@ you you
 get get
 the the
 right right
-results results
+results resul
 (see see
 the the
 description description
 of of
 Porter). porter 
-stresses stresses
-gaps gaps
+stresses stress
+gaps ga
 gas gas
-ties ties
-cries cries
+ties ti
+cries cri
 stress stress
-agreed agreed
+agreed agree
 feed feed
 fished fished
-pirating pirating
+pirating pirate
 falling falling
-dropping dropping
-hoping hoping
-ated ated
-owing owing
-oringly oringly
+dropping drop
+hoping hope
+ated ate
+owing owe
+oringly ore
 being being
-sheded sheded
-shreded shreded
-raping raping
+sheded shede
+shreded shrede
+raping rape
 trapper trapper
-hoping hoping
-bided bided
+hoping hope
+bided bide
 boxed boxed
 bowing bowing
 bedsed bedsed
 cry cry
 by by
-say say
+say sai
 1Bonus 1bonus
 2small 2small
 3test 3test
 4here. 4here
-Lots lots
+Lots lo
 of of
-spaces, spaces
+spaces, spac
 but but
 the the
-number-words number words numberwords
+number-words number wor numberwor
 should should
 appear appear
 with with
@@ -139,7 +139,7 @@ your your
 fancy fancy
 tokenizer. tokenizer
 Early early
-examples examples
+examples exampl
 of of
 abbreviation abbreviation
 in in
@@ -156,9 +156,9 @@ address address
 198.35.26.96 198.35.26.96
 and/or and or
 https://198.35.26.96 https://198.35.26.96
-and/or/perhaps and or perhaps
+and/or/perhaps and or perha
 some-thing some thing something
-abso-frigging-lutely abso frigging lutely absofrigginglutely
+abso-frigging-lutely abso frig lutely absofrigginglutely
 amazing!! amazing
 1.0) 1.0
 The the
@@ -167,20 +167,20 @@ of of
 Latin latin
 and and
 Neo-Latin neo latin neolatin
-terms terms
+terms ter
 in in
-vernaculars vernaculars
+vernaculars vernacula
 has has
 been been
 pan-European pan european paneuropean
 and and
-predates predates
+predates predat
 modern modern
 English. english
 Some some
-examples examples
+examples exampl
 of of
-initialisms initialisms
+initialisms initialis
 in in
 this this
 class class
@@ -226,11 +226,11 @@ D. d
 should should
 remain remain
 two two
-words; words
-prof's profs
+words; wor
+prof's pro
 addition addition
 4 4
-loads-of-fun. loads of fun loadsoffun
+loads-of-fun. loa of fun loadsoffun
 as as
 in in
 4-5 4-5
@@ -246,7 +246,7 @@ term term
 of of
 disputed disputed
 origin, origin
-dating dating
+dating date
 back back
 at at
 least least
@@ -256,7 +256,7 @@ early early
 19th 19th
 century, century
 now now
-used used
+used use
 around around
 the the
 world world
@@ -267,7 +267,7 @@ for for
 good," good
 from from
 1838, 1838,
-nowadays nowadays
+nowadays nowada
 commonly commonly
 expanded expanded
 to to
@@ -283,7 +283,7 @@ the the
 word word
 alphabet alphabet
 itself itself
-comes comes
+comes com
 to to
 Middle middle
 English english
@@ -295,12 +295,12 @@ Alphabetum, alphabetum
 which which
 in in
 turn turn
-derives derives
+derives deriv
 from from
 the the
 Ancient ancient
 Greek greek
-Alphabetos, alphabetos
+Alphabetos, alphabet
 from from
 alpha alpha
 and and
@@ -308,7 +308,7 @@ beta, beta
 the the
 first first
 two two
-letters letters
+letters lette
 of of
 the the
 Greek greek
@@ -320,5 +320,5 @@ alphabet alphabet
 is is
 called called
 learning learning
-one's ones
-A.B.C.'s. abcs
+one's on
+A.B.C.'s. ab
