@@ -110,8 +110,7 @@ cry cry
 by by
 say say
 1Bonus 1bonus
-2small	 2small
-	
+2small 2small
 3test 3test
 4here. 4here
 Lots lots

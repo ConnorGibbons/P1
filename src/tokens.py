@@ -6,7 +6,7 @@ def applyApostropheRule(token):
     return token.replace("'","").replace("’","")
 
 def simpleTok(input):
-    input = input.replace("\n"," ")
+    input = input.replace("\n"," ").replace("\t"," ")
     multiSpacePattern = re.compile(" +")
     consistenlySpaced = re.sub(multiSpacePattern, " ", input)
     splitOnSpace = consistenlySpaced.split(" ")
@@ -16,6 +16,7 @@ def simpleTok(input):
         if(token == ""):
             continue
         retList.append(token)
+    print(retList)
     return retList
 
 
@@ -175,7 +176,7 @@ def porter1b(word):
             return word
         if(trimmedWord.endswith("at") or trimmedWord.endswith("bl") or trimmedWord.endswith("iz") or isShort(trimmedWord)):
             return trimmedWord + "e"
-        if(trimmedWord[-1] == trimmedWord[-2] and (["b","d","f","g","m","n","p","r"].contians(trimmedWord[-1]))):
+        if(trimmedWord[-1] == trimmedWord[-2] and ((trimmedWord[-1] in ["b","d","f","g","m","n","p","r"]))):
             return trimmedWord[:-1]
         return word
     else:
