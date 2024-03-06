@@ -349,6 +349,10 @@ if __name__ == '__main__':
         if(stemming):
             tokenizedFile = simpleStem(tokenizedFile)
 
+
+        for token in tokenizedFile:
+            tokensFile.write(f"{token[0]} {token[1]}\n") if token[1] != "" else tokensFile.write(f"{token[0]}\n")
+
         i = 1
         seen = []
         strList = []
@@ -358,7 +362,6 @@ if __name__ == '__main__':
             if(i % 10 == 0):
                 strList.append(f"{i} {len(seen)}")
             i += 1
-            tokensFile.write(f"{token[0]} {token[1]}\n") if token[1] != "" else tokensFile.write(f"{token[0]}\n")
         if(i % 10 != 0):
             strList.append(f"{i} {len(seen)}")
         for str in strList:
