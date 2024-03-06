@@ -16,7 +16,6 @@ def simpleTok(input):
         if(token == ""):
             continue
         retList.append(token)
-    print(retList)
     return retList
 
 
@@ -245,6 +244,28 @@ def strFromList(ls):
         retStr += " " + elem
     return retStr
 
+
+def simpleStop(simpleTokenizedTuple):
+    retList = []
+    for token in simpleTokenizedTuple:
+        if(token[0] not in stopword_lst):
+            retList.append(token)
+        else:
+            retList.append((token[0],""))
+    return retList
+
+def simpleStem(simpleTokenizedTuple):
+    retList = []
+    for token in simpleTokenizedTuple:
+        retList.append((token[0],porterStem(token[1])))
+    return retList
+
+def simpleTuple(simpleTokenized):
+    retList = []
+    for token in simpleTokenized:
+        retList.append((token, token))
+    return retList
+
 # def stripNewlines(tokenizedFile):
 #     retTokens = []
 #     for token in tokenizedFile:
@@ -265,7 +286,7 @@ if __name__ == '__main__':
     argv_len = len(sys.argv)
     inputFile = gzip.open(sys.argv[1]) if argv_len >= 2 else gzip.open("../P1-train.gz") 
     outputPrefix = sys.argv[2] if argv_len >= 3 else "../P1-train"
-    tokenizeType = sys.argv[3] if argv_len >= 4 else "simple"
+    tokenizeType = sys.argv[3] if argv_len >= 4 else "spaces"
     stopList = (sys.argv[4] == "yesStop") if argv_len >= 5 else False
     stemming = (sys.argv[5] == "porterStem") if argv_len >= 5 else False
 
@@ -276,50 +297,72 @@ if __name__ == '__main__':
     allTokens = []
 
     # tokenizedFile = stripNewlines(tokenizedFile)
+    if(tokenizeType == "fancy"):
+        if(stopList):
+            tokenizedFile = stop(tokenizedFile)
+        if(stemming):
+            tokenizedFile = applyPorterStem(tokenizedFile)
 
-    if(stopList):
-        tokenizedFile = stop(tokenizedFile)
-    if(stemming):
-        tokenizedFile = applyPorterStem(tokenizedFile)
+        for token in tokenizedFile: 
+            if(isinstance(token[1], list)):
+                allTokens.extend(token[1])
+            else:
+                allTokens.append(token[1])
 
-    for token in tokenizedFile: 
-        if(isinstance(token[1], list)):
-            allTokens.extend(token[1])
-        else:
-            allTokens.append(token[1])
+        for token in tokenizedFile:
+            #print(token)
+            tokensFile.write(f"{token[0]}{strFromList(token[1])}\n")
 
-    for token in tokenizedFile:
-        #print(token)
-        tokensFile.write(f"{token[0]}{strFromList(token[1])}\n")
-
-    
-    i = 1
-    strList = []
-    seen = []
-    for token in allTokens:
-        if(token not in seen):
-            seen.append(token)
-        if(i % 10 == 0):
+        
+        i = 1
+        strList = []
+        seen = []
+        for token in allTokens:
+            if(token not in seen):
+                seen.append(token)
+            if(i % 10 == 0):
+                strList.append(f"{i} {len(seen)}")
+            i += 1
+        if(i % 10 != 0):
             strList.append(f"{i} {len(seen)}")
-        i += 1
-    if(i % 10 != 0):
-        strList.append(f"{i} {len(seen)}")
-    for elem in strList:
-        heapsFile.write(f"{elem}\n")
+        for elem in strList:
+            heapsFile.write(f"{elem}\n")
 
-    tokenDict = {}
-    for token in allTokens:
-        if token in tokenDict:
-            tokenDict[token] += 1
-        else:
-            tokenDict[token] = 1
-    tokenDict = sorted(tokenDict.items(), key=lambda x: x[1], reverse=True)
-    i2 = 0 
-    for token in tokenDict:
-        if(i2 == 100):
-            break
-        statsFile.write(f"{token[0]} {token[1]}\n")
-        i2 += 1
+        tokenDict = {}
+        for token in allTokens:
+            if token in tokenDict:
+                tokenDict[token] += 1
+            else:
+                tokenDict[token] = 1
+        tokenDict = sorted(tokenDict.items(), key=lambda x: x[1], reverse=True)
+        i2 = 0 
+        for token in tokenDict:
+            if(i2 == 100):
+                break
+            statsFile.write(f"{token[0]} {token[1]}\n")
+            i2 += 1
+
+    elif(tokenizeType == "spaces"):
+        tokenizedFile = simpleTuple(tokenizedFile)
+        if(stopList):
+            tokenizedFile = simpleStop(tokenizedFile)
+        if(stemming):
+            tokenizedFile = simpleStem(tokenizedFile)
+
+        i = 1
+        seen = []
+        strList = []
+        for token in tokenizedFile:
+            if(token[1] not in seen):
+                seen.append(token[1])
+            if(i % 10 == 0):
+                strList.append(f"{i} {len(seen)}")
+            i += 1
+            tokensFile.write(f"{token[0]} {token[1]}\n") if token[1] != "" else tokensFile.write(f"{token[0]}\n")
+        if(i % 10 != 0):
+            strList.append(f"{i} {len(seen)}")
+        for str in strList:
+            heapsFile.write(f"{str}\n")
 
     inputFile.close()
     

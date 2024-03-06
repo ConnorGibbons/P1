@@ -1,44 +1,85 @@
-First, first
+First, First,
 here here
+are
 all all
-stopwords, stopwords
+of
+the
+stopwords, stopwords,
 none none
+of
 which which
 should should
 make make
+it
 through through
 if if
-yesStop yesstop
-selected. selected
-Next next
+yesStop yesStop
+is
+selected. selected.
+a
+an
+and
+are
+as
+at
+be
+by
+for
+from
+has
+he
+in
+is
+it
+its
+of
+on
+that
+the
+to
+was
+were
+with
+Next Next
 here here
+are
 some some
 words words
+that
+are
 described described
+in
+the
 stemming stemming
 rules rules
+as
 having having
 particular particular
 values values
 after after
-stemming. stemming
-If if
+stemming. stemming.
+If If
 you you
 use use
-porterStem porterstem
+porterStem porterStem
+in
+the
 command command
-line, line
+line, line,
 you you
 can can
 see see
 if if
 you you
 get get
+the
 right right
 results results
-(see see
+(see (see
+the
 description description
-Porter). porter 
+of
+Porter). Porter).
 stresses stresses
 gaps gaps
 gas gas
@@ -66,157 +107,218 @@ boxed boxed
 bowing bowing
 bedsed bedsed
 cry cry
+by
 say say
-1Bonus 1bonus
+1Bonus 1Bonus
 2small 2small
 3test 3test
-4here. 4here
-Lots lots
-spaces, spaces
+4here. 4here.
+Lots Lots
+of
+spaces, spaces,
 but but
-number-words number words numberwords
+the
+number-words number-words
 should should
 appear appear
+with
 nothing nothing
 between between
-them. them
-Finally, finally
+them. them.
+Finally, Finally,
+the
 rest rest
+of
+the
 text text
+is
 designed designed
+to
 stress stress
 your your
 fancy fancy
-tokenizer. tokenizer
-Early early
+tokenizer. tokenizer.
+Early Early
 examples examples
+of
 abbreviation abbreviation
-English english
-(Source: source
+in
+English English
+(Source: (Source:
 http://en.wikipedia.org/wiki/Acronym_and_initialism) http://en.wikipedia.org/wiki/Acronym_and_initialism)
 which which
 you you
 might might
 find find
-IP ip
+at
+IP IP
 address address
 198.35.26.96 198.35.26.96
-and/or or
+and/or and/or
 https://198.35.26.96 https://198.35.26.96
-and/or/perhaps or perhaps
-some-thing some thing something
-abso-frigging-lutely abso frigging lutely absofrigginglutely
-amazing!! amazing
-1.0) 1.0
+and/or/perhaps and/or/perhaps
+some-thing some-thing
+abso-frigging-lutely abso-frigging-lutely
+amazing!! amazing!!
+1.0) 1.0)
+The The
 use use
-Latin latin
-Neo-Latin neo latin neolatin
+of
+Latin Latin
+and
+Neo-Latin Neo-Latin
 terms terms
+in
 vernaculars vernaculars
+has
 been been
-pan-European pan european paneuropean
+pan-European pan-European
+and
 predates predates
 modern modern
-English. english
-Some some
+English. English.
+Some Some
 examples examples
+of
 initialisms initialisms
+in
 this this
 class class
-A.M. am
-Latin latin
+are: are:
+a) a)
+A.M. A.M.
+(from (from
+Latin Latin
 ante ante
-meridiem, meridiem
-"before before
-noon") noon
-P.M. pm
-Latin latin
+meridiem, meridiem,
+"before "before
+noon") noon")
+and
+P.M. P.M.
+(from (from
+Latin Latin
 post post
-meridiem, meridiem
-"after after
-noon") noon
-b) b
-A.D. ad
-Latin latin
-Anno anno
-Domini, domini
+meridiem, meridiem,
+"after "after
+noon") noon")
+b) b)
+A.D. A.D.
+(from (from
+Latin Latin
+Anno Anno
+Domini, Domini,
+"in "in
+the
 year year
+of
 our our
-Lord") lord
-(whose whose
+Lord") Lord")
+(whose (whose
 complement complement
-English, english
-B.C., bc
-English-sourced) english sourced englishsourced
-c) c
-D. d
+in
+English, English,
+B.C., B.C.,
+is
+English-sourced) English-sourced)
+c) c)
+A. A.
+D. D.
 should should
 remain remain
 two two
-words; words
-prof's profs
+words; words;
+prof's prof's
 addition addition
 4 4
-loads-of-fun. loads fun loadsoffun
+loads-of-fun. loads-of-fun.
+as
+in
 4-5 4-5
 or or
 +3.1415+-0.002 +3.1415+-0.002
+and
 so so
+on
 2.0 2.0
-O.K., ok
+O.K., O.K.,
+a
 term term
+of
 disputed disputed
-origin, origin
+origin, origin,
 dating dating
 back back
+at
 least least
+to
+the
 early early
 19th 19th
-century, century
+century, century,
 now now
 used used
 around around
+the
 world world
-3.1) 3.1
-n.g., ng
-"no no
-good," good
+3.1) 3.1)
+n.g., n.g.,
+for
+"no "no
+good," good,"
+from
 1838, 1838,
 nowadays nowadays
 commonly commonly
 expanded expanded
-"n.b.g." nbg
-(no no
+to
+"n.b.g." "n.b.g."
+(no (no
 bloody bloody
-good) good
-4) 4
+good) good)
+4) 4)
+The The
 etymology etymology
+of
+the
 word word
 alphabet alphabet
 itself itself
 comes comes
-Middle middle
-English english
-Late late
-Latin latin
-Alphabetum, alphabetum
+to
+Middle Middle
+English English
+from
+the
+Late Late
+Latin Latin
+Alphabetum, Alphabetum,
 which which
+in
 turn turn
 derives derives
-Ancient ancient
-Greek greek
-Alphabetos, alphabetos
+from
+the
+Ancient Ancient
+Greek Greek
+Alphabetos, Alphabetos,
+from
 alpha alpha
-beta, beta
+and
+beta, beta,
+the
 first first
 two two
 letters letters
-Greek greek
-alphabet. alphabet
-Colloquially, colloquially
+of
+the
+Greek Greek
+alphabet. alphabet.
+Colloquially, Colloquially,
 learning learning
+the
 alphabet alphabet
+is
 called called
 learning learning
-one's ones
-A.B.C.'s. abcs
+one's one's
+A.B.C.'s. A.B.C.'s.
